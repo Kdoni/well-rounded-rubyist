@@ -19,4 +19,25 @@ end
 def ticket.price
   '5.50'
 end
-puts '%.2f.' % ticket.price
+
+def ticket.seat
+  'Second Balcony, orw J, seat 12'
+end
+
+def ticket.refundable?
+  false
+end
+
+def ticket.transferable?
+  false
+end
+
+def ticket.smoking?
+  false
+end
+
+def ticket.print_details(*x)
+  x.each { |e| puts "This ticket is #{e}" }
+end
+
+ticket.print_details('seat', 'refundable', 'venue', 'performer')
